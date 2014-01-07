@@ -1,41 +1,17 @@
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("#accordion").accordion();
-    });
-</script>
-
-<div id="accordion">
-
-  <div>
-    <%= link_to 'Home', {:controller => "home", :action => "index"} %><br />
-  </div>
-  <h3>Cadastros</h3>
-  <div>
-    <%= link_to 'Produtos', produtos_path %>
-    <%= link_to 'Clientes', clientes_path %>
-    <%= link_to 'Funcionários', funcionarios_path %>
-    <%= link_to 'Fornecedores', fornecedores_path %>
-  </div>
-  <h3>Vendas</h3>
-  <div>
-  </div>
-
-  <div>
-    <%= link_to 'Estoque', estoques_path %>
-  </div>
-  <%= link_to 'Consultar Produtos', produtos_path %>
-  <div>
-  </div>
-
-  <div>
-  </div>
-  <h3>Configurações</h3>
-  <div>
-    <%= link_to 'Usuários', usuarios_path %>
-  </div>
-
-  <div>
-  </div>
-
-
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+<div class="pure-menu pure-menu-open">
+  <a class="pure-menu-heading"><%= link_to 'Home', {:controller => "home", :action => "index"} %></a>
+<ul>
+    <li class="pure-menu-heading">Cadastro</li>
+    <li><%= link_to 'Produtos', produtos_path %></li>
+    <li><%= link_to 'Clientes', clientes_path %></li>
+    <li> <%= link_to 'Funcionários', funcionarios_path %></li>
+    <li><%= link_to 'Fornecedores', fornecedores_path %></li>
+    <li class="pure-menu-heading">Vendas</li>
+    <li><%= link_to 'Estoque', estoques_path %></li>
+    <li><%= link_to 'Consultar Produtos', produtos_path %></li>
+    <li class="pure-menu-heading">Configurações</li>
+    <li> <%= link_to 'Usuários', usuarios_path %></li>
+  </ul>
 </div>
+
