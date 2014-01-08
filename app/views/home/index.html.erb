@@ -17,6 +17,29 @@
 <div id="dialog" title="Sistema Multiação Integrado">
   <p>Seja bem vindo á tela principal do Multiação. Aqui vão aparecer informações uteis que irão lhe auxiliar no manuseio do sistema...</p>
 </div>
+<script>
+    $(function() {
+        $( "#dialog-message" ).dialog({
+            modal: true,
+            buttons: {
+                Ok: function() {
+                    $( this ).dialog( "close" );
+                }
+            }
+        });
+    });
+</script>
+</head>
+<body>
 
+<div id="dialog-message" title="Logado com sucesso.">
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    Login efetuado com sucesso.
+  </p>
+  <p>
+    Seja Bem Vindo ao  <b>MultiAção</b>.
+  </p>
+</div>
 
 </body>
